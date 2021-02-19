@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListadoComponent } from './components/users/listado/listado.component';
-import { ListadoCochesComponent } from './components/cars/listado-coches/listado-coches.component';
+import { UserListComponent } from './components/users/user-list/user-list.component';
+import { CarListComponent } from './components/cars/car-list/car-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListadoComponent,
-    ListadoCochesComponent
+    UserListComponent,
+    CarListComponent
   ],
   imports: [
     BrowserModule,
