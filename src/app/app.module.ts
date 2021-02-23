@@ -7,6 +7,8 @@ import { UserListComponent } from './components/users/user-list/user-list.compon
 import { CarListComponent } from './components/cars/car-list/car-list.component';
 import { DogListComponent } from './components/dogs/dog-list/dog-list.component';
 import { AddUserComponent } from './components/users/add-user/add-user.component';
+import { FormsModule } from '@angular/forms';
+import { NavComponent } from './shared/header/nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +16,13 @@ import { AddUserComponent } from './components/users/add-user/add-user.component
     UserListComponent,
     CarListComponent,
     DogListComponent,
-    AddUserComponent
+    AddUserComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

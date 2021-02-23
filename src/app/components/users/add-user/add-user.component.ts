@@ -9,6 +9,10 @@ import { UserService } from 'src/app/services/users/user.service';
 export class AddUserComponent implements OnInit {
   userService: UserService;
 
+  name: string = '';
+  lastname: string = '';
+  salary: number= 0;
+
   constructor(userService: UserService) { 
     this.userService = userService;
   }
@@ -18,9 +22,9 @@ export class AddUserComponent implements OnInit {
 
   add(): void {
     this.userService.add({
-      name: 'AAA',
-      lastname: 'BBB',
-      salary: 0
+      name: this.name,
+      lastname: this.lastname,
+      salary: this.salary
     });
     /*
     this.users.push(

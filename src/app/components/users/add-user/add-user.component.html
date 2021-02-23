@@ -1,1 +1,7 @@
-<button (click)="add()">add</button>
+
+<form>
+    <input placeholder="Nombre" [(ngModel)]="name">
+    <input placeholder="Apellido" [(ngModel)]="lastname">
+    <input placeholder="Salario" [(ngModel)]="salary">
+    <button (submit)="add()">add</button>
+</form>
