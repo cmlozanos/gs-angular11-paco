@@ -10,6 +10,7 @@
     <tr *ngFor="let u of users"> 
         <td>{{u | lowercase}}</td>
         <td>{{ 'asldkajsdlkjasd' | uppercase}}</td>
+        <td>{{ 10.5 | currency }}</td>
     </tr>
 </table>
 <button (click)="add()">add</button>
