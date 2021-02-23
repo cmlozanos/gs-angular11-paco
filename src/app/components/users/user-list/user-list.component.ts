@@ -25,7 +25,13 @@ export class UserListComponent implements OnInit {
   }
 
   add(): void {
-    this.users.push('AAA');
+    this.users.push(
+      {
+        name: 'AAA',
+        lastname: 'BBB',
+        salary: 0
+      }
+    );
     console.log('ADDING');
   }
 }
