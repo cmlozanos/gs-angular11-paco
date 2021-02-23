@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from 'src/app/services/users/user.service';
 
 @Component({
   selector: 'app-user-list',
@@ -7,31 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserListComponent implements OnInit {
 
-  users: Object[] = [];
+  users: Object[];
 
-  constructor() { }
+  constructor(userService: UserService) { 
+    this.users = userService.users;
+  }
 
   ngOnInit(): void {
-    this.users = [{
-      name: 'Carlos',
-      lastname: 'Lozano',
-      salary: 1
-    }, {
-      name: 'Paco',
-    lastname: 'Garcia',
-    salary: 1
-    }
-  ]
+    
   }
 
-  add(): void {
-    this.users.push(
-      {
-        name: 'AAA',
-        lastname: 'BBB',
-        salary: 0
-      }
-    );
-    console.log('ADDING');
-  }
 }
