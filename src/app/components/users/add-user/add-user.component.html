@@ -1,8 +1,8 @@
 
-<form>
+<form (ngSubmit)="add(); userForm.reset()" #userForm="ngForm">
     <input placeholder="Nombre" [(ngModel)]="name" name="name">
     <input placeholder="Apellido" [(ngModel)]="lastname" name="lastname">
     <input placeholder="Salario" [(ngModel)]="salary" name ="salary">
-    <button (click)="add()">add</button>
+    <button type="submit">save</button>
 </form>
 {{name}} - {{lastname}} - {{salary}}
