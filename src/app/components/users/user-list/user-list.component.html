@@ -1,4 +1,4 @@
-<table>
+<table class="table table-striped">
     <!--
       <tr>
         <td>Carlos</td>
@@ -12,8 +12,8 @@
         <td>{{ u.lastname | uppercase}}</td>
         <td>{{ u.salary | currency }}</td>
         <td>
-          <button>edit</button>
-          <button (click)="delete(u.name)">delete</button>
+          <button type="button" class="btn btn-warning ml-2">edit</button>
+          <button (click)="delete(u.name)" type="button" class="btn btn-danger ml-2">delete</button>
         </td>
     </tr>
 </table>
