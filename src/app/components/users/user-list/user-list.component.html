@@ -11,7 +11,12 @@
         <td>{{ u.name | lowercase}}</td>
         <td>{{ u.lastname | uppercase}}</td>
         <td>{{ u.salary | currency }}</td>
+        <td>
+          <button>edit</button>
+          <button>delete</button>
+        </td>
     </tr>
 </table>
+<hr>
 <!-- <button onclick="add()">add</button> -->
 <app-add-user></app-add-user>
