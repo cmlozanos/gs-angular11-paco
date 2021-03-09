@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { User } from 'src/app/shared/models/user';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  users: Object[] = [];
+
+  users: User[] = [];
 
   constructor() {
     this.users = [{
@@ -20,7 +22,11 @@ export class UserService {
     ]
    }
 
-   add(user: { name: string; lastname: string; salary: number; }) {
+   add(user: User) {
     this.users.push(user);
+  }
+
+  delete(name: string) {
+    this.users = this.users.filter(u => u.name !== name);
   }
 }

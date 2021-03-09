@@ -13,7 +13,7 @@
         <td>{{ u.salary | currency }}</td>
         <td>
           <button>edit</button>
-          <button>delete</button>
+          <button (click)="delete(u.name)">delete</button>
         </td>
     </tr>
 </table>

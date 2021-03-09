@@ -8,14 +8,16 @@ import { UserService } from 'src/app/services/users/user.service';
 })
 export class UserListComponent implements OnInit {
 
-  users: Object[];
+  users = this.userService.users;
 
-  constructor(userService: UserService) { 
-    this.users = userService.users;
-  }
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {
     
   }
 
+  delete(name: string): void {
+    this.userService.delete(name);
+    this.users = this.userService.users;
+  }
 }

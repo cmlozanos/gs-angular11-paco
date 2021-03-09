@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/users/user.service';
+import { User } from 'src/app/shared/models/user';
 
 @Component({
   selector: 'app-add-user',
@@ -7,25 +8,18 @@ import { UserService } from 'src/app/services/users/user.service';
   styleUrls: ['./add-user.component.css']
 })
 export class AddUserComponent implements OnInit {
-  userService: UserService;
-
+  
   name: string = '';
   lastname: string = '';
   salary: number= 0;
 
-  constructor(userService: UserService) { 
-    this.userService = userService;
-  }
+  constructor(private userService: UserService) { }
 
   ngOnInit(): void {
   }
 
   add(): void {
-    this.userService.add({
-      name: this.name,
-      lastname: this.lastname,
-      salary: this.salary
-    });
+    this.userService.add(new User(this.name, this.lastname, this.salary));
     /*
     this.users.push(
       {
